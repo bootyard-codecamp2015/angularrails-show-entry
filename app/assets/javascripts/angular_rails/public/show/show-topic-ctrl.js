@@ -8,18 +8,7 @@
      Topic.get({ id: $routeParams.topic_id }).$promise.then(function(data) {
        $scope.topic = data;
      });
-
-      $scope.updateTopic = function(topic_id) {
-        Topic.update({ id: $scope.topic.id }, $scope.topic)
-          .$promise.then(function(data) {
-            if(data.success == true) {
-              alert('Success');
-              //$rootScope.$broadcast('updatedProfile', true);
-            } else {
-              alert("Error in updating profile!");
-            }
-          });
-      }
+     
     }
  ]);
 })();
